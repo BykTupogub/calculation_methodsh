@@ -293,14 +293,14 @@ int main()
 	cout << "counts = " << segments.size() << endl;
 	vector<double> X;
 	vector<double> delta;
-	vector<int> m;
-	bisection(epsilon, segments, X, delta, m);
+	vector<int> M;
+	bisection(epsilon, segments, X, delta, M);
 	cout << "-------------------------------------" << endl;
 	cout << "Метод бисекции" << endl;
 	cout << "Начальные приближения к корню: ";
 	print_npk(segments);
 	cout << "Количество шагов: ";
-	print(m);
+	//print(m);
 	cout << "Приближенное решение с точность " << epsilon << ": ";
 	print(X);
 	cout << "длины отрезков: ";
@@ -310,7 +310,7 @@ int main()
 
 	X.clear();
 	delta.clear();
-	m.clear();
+	//m.clear();
 
 	cout << "-------------------------------------" << endl;
 	cout << "Метод Ньютона" << endl;
@@ -318,7 +318,7 @@ int main()
 	cout << "Начальные приближения к корню: ";
 	print_npk(segments);
 	cout << "Количество шагов: ";
-	print(m);
+	//print(m);
 	cout << "Приближенное решение с точность " << epsilon << ": ";
 	print(X);
 	cout << "длины отрезков: ";
@@ -329,7 +329,7 @@ int main()
 
 	X.clear();
 	delta.clear();
-	m.clear();
+	//m.clear();
 
 	cout << "-------------------------------------" << endl;
 	cout << "Модифицированный метод Ньютона" << endl;
@@ -337,7 +337,7 @@ int main()
 	cout << "Начальные приближения к корню: ";
 	print_npk(segments);
 	cout << "Количсетво шагов: ";
-	print(m);
+	//print(m);
 	cout << "Приближенное решение с точность " << epsilon << ": ";
 	print(X);
 	cout << "длины отрезков: ";
@@ -347,7 +347,7 @@ int main()
 
 	X.clear();
 	delta.clear();
-	m.clear();
+	//m.clear();
 
 	secant_method(epsilon, segments, X, delta, m);
 	cout << "-------------------------------------" << endl;
@@ -355,7 +355,7 @@ int main()
 	cout << "Начальные приближения к корню: ";
 	print_npk(segments);
 	cout << "Количество шагов: ";
-	print(m);
+	//print(m);
 	cout << "Приближенное решение с точность " << epsilon << ": ";
 	print(X);
 	cout << "длины отрезков: ";

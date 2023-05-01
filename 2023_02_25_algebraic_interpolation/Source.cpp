@@ -4,9 +4,7 @@
 #include<vector>
 #include<utility>
 
-
 using namespace std;
-
 
 double f(double x);
 
@@ -29,6 +27,7 @@ int main()
 
 	cout << "«јƒј„ј јЋ√≈Ѕ–ј»„≈— ќ√ќ »Ќ“≈–ѕќЋ»–ќ¬јЌ»я" << endl;
 	cout << "¬ј–»јЌ“ 3" << endl;
+	cout << "f(x) = exp(x) - x" << endl;
 	int m = 0;
 	cout << "¬ведите число значений в таблице:" << endl;
 	cin >> m;
@@ -54,7 +53,7 @@ int main()
 			cin >> n;
 			if (n > m)
 			{
-				cout << "степень интерпол€ционнго многочлена должна быть меньше" << m << endl;
+				cout << "степень интерпол€ционнго многочлена должна быть меньше " << m << endl;
 			}
 			if (n < 1)
 			{
@@ -81,10 +80,8 @@ int main()
 			cout << "¬ведите 0 дл€ выхода из программы или 1 дл€ вычислени€ многочленов в новой точке" << endl;
 			cin >> menu;
 		}
+		n = m + 1;
 	}
-	
-	
-
 	return EXIT_FAILURE;
 }
 
@@ -161,9 +158,7 @@ double divided_difference(vector<pair<double, double>> nodes, int a, int b)
 	}
 	else
 	{
-		double fa = divided_difference(nodes, a, b - 1);
-		double fb = divided_difference(nodes, a + 1, b);
-		return (fb - fa) / (nodes[b].first - nodes[a].first);
+		return (divided_difference(nodes, a + 1, b) - divided_difference(nodes, a, b - 1)) / (nodes[b].first - nodes[a].first);
 	}
 }
 
